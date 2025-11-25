@@ -78,22 +78,22 @@ Esta es una guía completa para aprender a usar Kiro, desde nivel básico hasta 
 
 Al completar esta demo, aprenderás:
 
-- ✅ Diferencia entre Modo Vibe y Modo Spec
-- ✅ Cómo crear y usar specs en Kiro
-- ✅ Property-based testing con fast-check
-- ✅ Configuración de steering files
-- ✅ Configuración de agent hooks
-- ✅ Configuración de MCP servers
-- ✅ Mejores prácticas de uso de Kiro
-- ✅ Optimización de consumo de tokens
+- Diferencia entre Modo Vibe y Modo Spec
+- Cómo crear y usar specs en Kiro
+- Property-based testing con fast-check
+- Configuración de steering files
+- Configuración de agent hooks
+- Configuración de MCP servers
+- Mejores prácticas de uso de Kiro
+- Optimización de consumo de tokens
 
 ## 🛠️ Requisitos Previos
 
-- **Kiro IDE instalado** - [Descargar Kiro](https://kiro.ai)
-- **Conocimientos básicos de TypeScript** (opcional pero recomendado)
-- **Git instalado** (para clonar el repositorio)
+- Kiro IDE instalado - [Descargar Kiro](https://kiro.ai)
+- Conocimientos básicos de TypeScript (opcional pero recomendado)
+- Git instalado (para clonar el repositorio)
 
-**Nota:** Node.js y TypeScript se configurarán con ayuda de Kiro durante la demo. Las guías incluyen instrucciones sobre cómo pedirle a Kiro que configure el entorno.
+Nota: Node.js y TypeScript se configurarán con ayuda de Kiro durante la demo. Las guías incluyen instrucciones sobre cómo pedirle a Kiro que configure el entorno.
 
 ## ⚡ Inicio Rápido
 
@@ -120,25 +120,25 @@ Al completar esta demo, aprenderás:
 ## 📚 Guías y Recursos
 
 ### 🎯 Guía Maestra
-- **[DEMO-GUIDE.md](guides/DEMO-GUIDE.md)** - Timeline completo de 2 horas paso a paso
+- [DEMO-GUIDE.md](guides/DEMO-GUIDE.md) - Timeline completo de 2 horas paso a paso
 
 ### 📖 Guías de Proyectos
-- **[VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md)** - Guía completa del proyecto Vibe (15 min)
-- **[SPEC-GUIDE.md](guides/projects/SPEC-GUIDE.md)** - Guía paso a paso del proyecto Spec (~90 min)
-- **[EARS-GUIDE.md](guides/projects/EARS-GUIDE.md)** - Ejercicio práctico de formato EARS (5 min)
+- [VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md) - Guía completa del proyecto Vibe (15 min)
+- [SPEC-GUIDE.md](guides/projects/SPEC-GUIDE.md) - Guía paso a paso del proyecto Spec (~90 min)
+- [EARS-GUIDE.md](guides/projects/EARS-GUIDE.md) - Ejercicio práctico de formato EARS (5 min)
 
 ### ⚙️ Guías de Características
-- **[STEERING-GUIDE.md](guides/features/STEERING-GUIDE.md)** - Configurar steering files (5-10 min)
-- **[HOOKS-GUIDE.md](guides/features/HOOKS-GUIDE.md)** - Configurar agent hooks (5-10 min)
-- **[MCP-GUIDE.md](guides/features/MCP-GUIDE.md)** - Configurar MCP servers (10-15 min)
-- **[GITHUB-CICD-GUIDE.md](guides/features/GITHUB-CICD-GUIDE.md)** - GitHub y CI/CD (10 min)
+- [STEERING-GUIDE.md](guides/features/STEERING-GUIDE.md) - Configurar steering files (5-10 min)
+- [HOOKS-GUIDE.md](guides/features/HOOKS-GUIDE.md) - Configurar agent hooks (5-10 min)
+- [MCP-GUIDE.md](guides/features/MCP-GUIDE.md) - Configurar MCP servers (10-15 min)
+- [GITHUB-CICD-GUIDE.md](guides/features/GITHUB-CICD-GUIDE.md) - GitHub y CI/CD (10 min)
 
 ### 💡 Guías de Mejores Prácticas
-- **[BEST-PRACTICES.md](guides/best-practices/BEST-PRACTICES.md)** - Mejores prácticas de uso de Kiro
-- **[ADVANCED-FEATURES.md](guides/best-practices/ADVANCED-FEATURES.md)** - Funcionalidades avanzadas
+- [BEST-PRACTICES.md](guides/best-practices/BEST-PRACTICES.md) - Mejores prácticas de uso de Kiro
+- [ADVANCED-FEATURES.md](guides/best-practices/ADVANCED-FEATURES.md) - Funcionalidades avanzadas
 
 ### ❓ Preguntas Frecuentes
-- **[FAQ.md](guides/FAQ.md)** - Respuestas a preguntas comunes sobre Kiro
+- [FAQ.md](guides/FAQ.md) - Respuestas a preguntas comunes sobre Kiro
 
 ## 🤝 Contribuciones
 

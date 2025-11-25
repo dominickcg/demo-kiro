@@ -177,16 +177,16 @@ El consumo de tokens se muestra en el chat después de cada respuesta de Kiro. T
 ### ¿Qué consume más tokens?
 
 **Alto consumo:**
-- ❌ Incluir archivos grandes con #File
-- ❌ Solicitudes muy generales que requieren mucho contexto
-- ❌ Generar código muy extenso de una vez
-- ❌ Usar #Codebase en proyectos grandes
+- Incluir archivos grandes con #File
+- Solicitudes muy generales que requieren mucho contexto
+- Generar código muy extenso de una vez
+- Usar #Codebase en proyectos grandes
 
 **Bajo consumo:**
-- ✅ Solicitudes específicas y acotadas
-- ✅ Usar #File solo en archivos relevantes
-- ✅ Dividir tareas en pasos pequeños
-- ✅ Usar steering files para contexto persistente
+- Solicitudes específicas y acotadas
+- Usar #File solo en archivos relevantes
+- Dividir tareas en pasos pequeños
+- Usar steering files para contexto persistente
 
 ---
 
@@ -239,9 +239,9 @@ Los modelos disponibles varían según tu plan de suscripción.
 
 **Recomendaciones:**
 
-- 🎯 **Usa Opus cuando:** Necesitas razonamiento complejo, arquitectura de sistemas, debugging difícil
-- 🎯 **Usa Sonnet cuando:** Desarrollo general, refactoring, implementación de features
-- 🎯 **Usa Haiku cuando:** Preguntas simples, formateo de código, tareas repetitivas
+- **Usa Opus cuando:** Necesitas razonamiento complejo, arquitectura de sistemas, debugging difícil
+- **Usa Sonnet cuando:** Desarrollo general, refactoring, implementación de features
+- **Usa Haiku cuando:** Preguntas simples, formateo de código, tareas repetitivas
 
 ### ¿Los diferentes modelos de Claude consumen diferentes cantidades de tokens?
 
@@ -304,10 +304,10 @@ test("suma es conmutativa", () => {
 ```
 
 **Beneficios:**
-- ✅ Menor consumo de tokens por solicitud
-- ✅ Más fácil de revisar y corregir
-- ✅ Mejor control del proceso
-- ✅ Resultados más precisos
+- Menor consumo de tokens por solicitud
+- Más fácil de revisar y corregir
+- Mejor control del proceso
+- Resultados más precisos
 
 ### ¿Cuándo debo usar steering files?
 
@@ -388,10 +388,10 @@ Usa steering files cuando:
 
 ## 🆘 ¿Necesitas Más Ayuda?
 
-- 📖 Revisa la documentación oficial de Kiro
-- 💬 Únete a la comunidad de Kiro
-- 🐛 Reporta issues en GitHub
-- 📧 Contacta soporte técnico
+- Revisa la documentación oficial de Kiro
+- Únete a la comunidad de Kiro
+- Reporta issues en GitHub
+- Contacta soporte técnico
 
 ---
 

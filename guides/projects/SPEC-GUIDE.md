@@ -248,10 +248,10 @@ npm run validate examples/spec/anomaly-acta.json
 ## CHECKPOINT 1: Funcionalidad Básica Completa
 
 **Verificar:**
-- ✓ Parser lee y parsea archivos JSON
-- ✓ Validator detecta inconsistencias
-- ✓ CLI funciona con los 3 ejemplos
-- ✓ Mensajes de error en español
+- Parser lee y parsea archivos JSON
+- Validator detecta inconsistencias
+- CLI funciona con los 3 ejemplos
+- Mensajes de error en español
 
 **Si algo falla:** Pide a Kiro que revise y corrija el componente específico.
 
@@ -373,10 +373,10 @@ npm test
 ## CHECKPOINT 2: Property Tests Completos
 
 **Verificar:**
-- ✓ 4 property tests implementados y pasando
-- ✓ Cada test ejecuta 100 iteraciones
-- ✓ Comentarios de anotación presentes
-- ✓ Generadores producen datos válidos
+- 4 property tests implementados y pasando
+- Cada test ejecuta 100 iteraciones
+- Comentarios de anotación presentes
+- Generadores producen datos válidos
 
 ---
 
@@ -507,13 +507,13 @@ Agrega estos scripts a package.json:
 ## CHECKPOINT FINAL: Proyecto Completo
 
 **Verificar:**
-- ✓ Código funcional con parser, validator, y CLI
-- ✓ Property tests implementados y pasando
-- ✓ Unit tests implementados y pasando
-- ✓ Steering file configurado
-- ✓ Agent hook funcionando
-- ✓ README documentado
-- ✓ Todos los tests pasan
+- Código funcional con parser, validator, y CLI
+- Property tests implementados y pasando
+- Unit tests implementados y pasando
+- Steering file configurado
+- Agent hook funcionando
+- README documentado
+- Todos los tests pasan
 
 ---
 

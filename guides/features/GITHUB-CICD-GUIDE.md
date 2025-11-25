@@ -8,10 +8,10 @@
 Esta guía te muestra cómo integrar tu proyecto de Kiro con GitHub y configurar CI/CD para ejecutar tests automáticamente en cada push o pull request.
 
 **Beneficios:**
-- ✅ Validación automática de código
-- ✅ Detectar errores antes de merge
-- ✅ Mantener calidad del código
-- ✅ Documentar estado del proyecto (badges)
+- Validación automática de código
+- Detectar errores antes de merge
+- Mantener calidad del código
+- Documentar estado del proyecto (badges)
 
 ---
 
@@ -172,14 +172,14 @@ git push
 ### Paso 4.2: Verificar Resultados
 
 **Resultado esperado:**
-- ✅ Checkout código
-- ✅ Configurar Node.js
-- ✅ Instalar dependencias
-- ✅ Ejecutar linter (si existe)
-- ✅ Ejecutar tests
+- Checkout código
+- Configurar Node.js
+- Instalar dependencias
+- Ejecutar linter (si existe)
+- Ejecutar tests
 
-**Si todo pasa:** ✓ Workflow exitoso (verde)  
-**Si algo falla:** ✗ Workflow fallido (rojo)
+**Si todo pasa:** Workflow exitoso (verde)  
+**Si algo falla:** Workflow fallido (rojo)
 
 ### Paso 4.3: Revisar Logs
 

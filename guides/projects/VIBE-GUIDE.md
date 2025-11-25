@@ -8,10 +8,10 @@
 ### ¿Qué es Modo Vibe?
 
 Modo Vibe es desarrollo rápido sin specs, diseño ni documentación formal. Es ideal para:
-- ✅ Prototipos rápidos
-- ✅ Exploración de ideas
-- ✅ Demos y experimentos
-- ❌ NO para código de producción
+- Prototipos rápidos
+- Exploración de ideas
+- Demos y experimentos
+- NO para código de producción
 - ❌ NO para proyectos en equipo
 
 ### Proyecto: Generador de Reportes de Participación Electoral

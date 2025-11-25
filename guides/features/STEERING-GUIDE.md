@@ -224,12 +224,12 @@ Crea el archivo .kiro/steering/typescript-conventions.md con convenciones para e
 ### Paso 2: Definir Convenciones
 
 Incluye secciones para:
-- ✅ Estilo de código (naming, formatting)
-- ✅ Estructura de archivos
-- ✅ Manejo de errores
-- ✅ Testing
-- ✅ Documentación
-- ✅ Dependencias preferidas
+- Estilo de código (naming, formatting)
+- Estructura de archivos
+- Manejo de errores
+- Testing
+- Documentación
+- Dependencias preferidas
 
 ### Paso 3: Ser Específico
 
