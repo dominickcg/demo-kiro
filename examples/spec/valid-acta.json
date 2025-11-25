@@ -1,0 +1,22 @@
+{
+  "mesaId": "MESA-001",
+  "votantesHabilitados": 300,
+  "votosPorCandidato": [
+    {
+      "candidatoId": "CAND-A",
+      "nombreCandidato": "Candidato A",
+      "votos": 120
+    },
+    {
+      "candidatoId": "CAND-B",
+      "nombreCandidato": "Candidato B",
+      "votos": 95
+    },
+    {
+      "candidatoId": "BLANCOS",
+      "nombreCandidato": "Votos en Blanco",
+      "votos": 10
+    }
+  ],
+  "totalVotos": 225
+}
