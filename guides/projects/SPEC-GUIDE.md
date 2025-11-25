@@ -97,6 +97,29 @@ Crea la estructura de carpetas para el proyecto:
 
 **Verificación:** Revisa que las carpetas existen en el explorador de archivos.
 
+### Paso 2.3: Configurar Steering File
+
+**¿Qué es un Steering File?**
+
+Un steering file le dice a Kiro qué convenciones seguir automáticamente. Lo configuramos ahora para que todo el código generado sea consistente.
+
+**Prompt para Kiro:**
+```
+Crea .kiro/steering/typescript-conventions.md con convenciones para este proyecto:
+- Usar interfaces en lugar de types
+- Nombres en camelCase para funciones y variables
+- Comentarios en español para lógica de negocio
+- Mensajes de usuario siempre en español
+- Un componente por archivo
+- Tests en archivos .test.ts
+```
+
+**Verificación:** Abre el archivo y revisa que las convenciones están documentadas.
+
+**Beneficio:** A partir de ahora, Kiro seguirá estas convenciones automáticamente sin que tengas que repetirlas en cada prompt.
+
+**Más información:** Consulta [STEERING-GUIDE.md](../features/STEERING-GUIDE.md) para detalles completos.
+
 ---
 
 ## Fase 3: Implementar Types (10 minutos)
@@ -380,7 +403,38 @@ npm test
 
 ---
 
-## Fase 8: Unit Tests (15 minutos)
+## Fase 8: Configurar Agent Hook (5 minutos)
+
+**¿Qué es un Agent Hook?**
+
+Un agent hook automatiza tareas en respuesta a eventos. Vamos a configurar uno para que los tests se ejecuten automáticamente cada vez que guardes un archivo.
+
+**Acción:**
+
+1. Abre el panel de Agent Hooks en Kiro (busca en la barra lateral)
+2. Haz clic en "Create New Hook" o botón "+"
+3. Configura el hook:
+   - **Name:** "Ejecutar tests al guardar"
+   - **Trigger:** onFileSave
+   - **File Pattern:** `**/*.ts`
+   - **Action Type:** Command
+   - **Command:** `npm test`
+   - **Enabled:** ✓
+
+4. Guarda el hook
+
+**Probar:**
+- Modifica cualquier archivo .ts
+- Guarda el archivo (Ctrl+S)
+- Observa que los tests se ejecutan automáticamente en la terminal
+
+**Beneficio:** Ahora detectarás errores inmediatamente sin tener que ejecutar tests manualmente.
+
+**Más información:** Consulta [HOOKS-GUIDE.md](../features/HOOKS-GUIDE.md) para más ejemplos de hooks.
+
+---
+
+## Fase 9: Unit Tests (15 minutos)
 
 ### Paso 8.1: Tests del Parser
 
@@ -420,48 +474,11 @@ npm test
 
 ---
 
-## Fase 9: Características Avanzadas de Kiro (20 minutos)
+## Fase 10: Configurar MCP Server (Opcional - 10 minutos)
 
-### Paso 9.1: Configurar Steering File
+**¿Qué es MCP?**
 
-**Prompt para Kiro:**
-```
-Crea .kiro/steering/typescript-conventions.md con convenciones para este proyecto:
-- Usar interfaces en lugar de types
-- Nombres en camelCase para funciones y variables
-- Comentarios en español para lógica de negocio
-- Mensajes de usuario siempre en español
-- Un componente por archivo
-- Tests en archivos .test.ts
-```
-
-**Verificación:** Abre el archivo y revisa que las convenciones están documentadas.
-
-**Probar:**
-```
-Kiro, crea una nueva función auxiliar en el validator que calcule el porcentaje de participación
-```
-
-Kiro debería seguir las convenciones del steering file automáticamente.
-
-### Paso 9.2: Configurar Agent Hook
-
-**Nota:** Los hooks se configuran desde la UI de Kiro, no mediante archivos.
-
-**Acción:**
-1. Abre el panel de Agent Hooks en Kiro
-2. Crea un nuevo hook:
-   - **Nombre:** "Ejecutar tests al guardar"
-   - **Trigger:** onFileSave
-   - **Pattern:** `**/*.ts`
-   - **Action:** `npm test`
-
-**Probar:**
-1. Modifica cualquier archivo .ts
-2. Guarda el archivo
-3. Observa que los tests se ejecutan automáticamente
-
-### Paso 9.3: Configurar MCP Server (Opcional)
+MCP (Model Context Protocol) extiende las capacidades de Kiro con herramientas externas. Vamos a configurar el servidor filesystem como ejemplo.
 
 **Prompt para Kiro:**
 ```
@@ -473,9 +490,18 @@ Configura un MCP server filesystem en .kiro/settings/mcp.json que permita:
 
 **Verificación:** Revisa que el servidor se conecta en el panel de MCP.
 
+**Uso:**
+```
+Usando herramientas MCP, lista los archivos en examples/spec/
+```
+
+**Más información:** Consulta [MCP-GUIDE.md](../features/MCP-GUIDE.md) para configurar otros servidores.
+
+**Nota:** Esta sección es opcional. MCP es útil para integraciones avanzadas pero no es necesario para el proyecto básico.
+
 ---
 
-## Fase 10: Integración y Documentación (10 minutos)
+## Fase 11: Integración y Documentación (10 minutos)
 
 ### Paso 10.1: Crear README del Proyecto
 
@@ -510,8 +536,9 @@ Agrega estos scripts a package.json:
 - Código funcional con parser, validator, y CLI
 - Property tests implementados y pasando
 - Unit tests implementados y pasando
-- Steering file configurado
-- Agent hook funcionando
+- Steering file configurado (Fase 2)
+- Agent hook funcionando (Fase 8)
+- MCP configurado (opcional)
 - README documentado
 - Todos los tests pasan
 
