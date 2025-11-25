@@ -521,12 +521,12 @@ Antes de enviar un prompt, verifica:
 
 ## 10. Recursos Adicionales
 
-- **EARS-GUIDE.md:** Formato de requirements
-- **SPEC-GUIDE.md:** Desarrollo estructurado
-- **STEERING-GUIDE.md:** Configurar convenciones
-- **HOOKS-GUIDE.md:** Automatizar tareas
-- **MCP-GUIDE.md:** Extender capacidades
-- **FAQ.md:** Preguntas frecuentes
+- **[EARS-GUIDE.md](../projects/EARS-GUIDE.md):** Formato de requirements
+- **[SPEC-GUIDE.md](../projects/SPEC-GUIDE.md):** Desarrollo estructurado
+- **[STEERING-GUIDE.md](../features/STEERING-GUIDE.md):** Configurar convenciones
+- **[HOOKS-GUIDE.md](../features/HOOKS-GUIDE.md):** Automatizar tareas
+- **[MCP-GUIDE.md](../features/MCP-GUIDE.md):** Extender capacidades
+- **[FAQ.md](../FAQ.md):** Preguntas frecuentes
 
 ---
 

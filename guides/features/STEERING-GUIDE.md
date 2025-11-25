@@ -388,4 +388,4 @@ Ahora que entiendes steering files, puedes:
 2. Compartir steering files con tu equipo
 3. Explorar Agent Hooks para automatización adicional
 
-**Archivo relacionado:** `HOOKS-GUIDE.md` - Aprende sobre automatización con hooks
+**Archivo relacionado:** [HOOKS-GUIDE.md](HOOKS-GUIDE.md) - Aprende sobre automatización con hooks

@@ -91,7 +91,7 @@ Vamos a construir dos proyectos:
 
 ### Minutos 5-20: PARTE 1 - Modo Vibe
 
-**Guía:** [VIBE-GUIDE.md](VIBE-GUIDE.md)
+**Guía:** [VIBE-GUIDE.md](projects/VIBE-GUIDE.md)
 
 #### Minutos 5-8: Introducción al Modo Vibe
 
@@ -170,7 +170,7 @@ Ahí entra el Modo Spec."
 
 ### Minutos 20-25: Ejercicio EARS
 
-**Guía:** [EARS-GUIDE.md](EARS-GUIDE.md)
+**Guía:** [EARS-GUIDE.md](projects/EARS-GUIDE.md)
 
 **Script sugerido:**
 ```
@@ -198,7 +198,7 @@ completar la validación en menos de 2 segundos"
 
 ### Minutos 25-35: PARTE 2 - Explorar Specs
 
-**Guía:** [SPEC-GUIDE.md](SPEC-GUIDE.md) - Fase 1
+**Guía:** [SPEC-GUIDE.md](projects/SPEC-GUIDE.md) - Fase 1
 
 **Script sugerido:**
 ```
@@ -250,7 +250,7 @@ vamos a explorarlos para entender la estructura."
 
 ### Minutos 35-50: Setup e Implementación de Types
 
-**Guía:** [SPEC-GUIDE.md](SPEC-GUIDE.md) - Fases 2 y 3
+**Guía:** [SPEC-GUIDE.md](projects/SPEC-GUIDE.md) - Fases 2 y 3
 
 #### Minutos 35-40: Setup del Proyecto
 
@@ -283,7 +283,7 @@ Crea el archivo src/types/acta.ts con las interfaces:
 
 #### Minutos 45-50: Configurar Steering File
 
-**Guía:** [STEERING-GUIDE.md](STEERING-GUIDE.md)
+**Guía:** [STEERING-GUIDE.md](features/STEERING-GUIDE.md)
 
 **Script sugerido:**
 ```
@@ -307,7 +307,7 @@ Crea .kiro/steering/typescript-conventions.md con convenciones:
 
 ### Minutos 50-70: Implementar Parser y Validator
 
-**Guía:** [SPEC-GUIDE.md](SPEC-GUIDE.md) - Fases 4 y 5
+**Guía:** [SPEC-GUIDE.md](projects/SPEC-GUIDE.md) - Fases 4 y 5
 
 #### Minutos 50-60: Implementar Parser
 
@@ -352,7 +352,7 @@ Usa los mensajes de error del design document en español.
 
 ### Minutos 70-75: Implementar CLI
 
-**Guía:** [SPEC-GUIDE.md](SPEC-GUIDE.md) - Fase 6
+**Guía:** [SPEC-GUIDE.md](projects/SPEC-GUIDE.md) - Fase 6
 
 **Prompt:**
 ```
@@ -379,7 +379,7 @@ Agrega script "validate" en package.json
 
 ### Minutos 75-95: Property-Based Testing
 
-**Guía:** [SPEC-GUIDE.md](SPEC-GUIDE.md) - Fase 7
+**Guía:** [SPEC-GUIDE.md](projects/SPEC-GUIDE.md) - Fase 7
 
 #### Minutos 75-80: Explicar Property-Based Testing
 
@@ -434,7 +434,7 @@ Cada test con 100 iteraciones y comentario de anotación.
 
 ### Minutos 95-100: Configurar Agent Hook
 
-**Guía:** [HOOKS-GUIDE.md](HOOKS-GUIDE.md)
+**Guía:** [HOOKS-GUIDE.md](features/HOOKS-GUIDE.md)
 
 **Script sugerido:**
 ```
@@ -462,7 +462,7 @@ Cada vez que guardemos un archivo, los tests se ejecutarán automáticamente."
 
 ### Minutos 100-105: Configurar MCP Server (Opcional)
 
-**Guía:** [MCP-GUIDE.md](MCP-GUIDE.md)
+**Guía:** [MCP-GUIDE.md](features/MCP-GUIDE.md)
 
 **Script sugerido:**
 ```
@@ -486,7 +486,7 @@ Usando herramientas MCP, lista los archivos en examples/spec/
 
 ### Minutos 105-115: GitHub y CI/CD
 
-**Guía:** [GITHUB-CICD-GUIDE.md](GITHUB-CICD-GUIDE.md)
+**Guía:** [GITHUB-CICD-GUIDE.md](features/GITHUB-CICD-GUIDE.md)
 
 **Script sugerido:**
 ```
@@ -642,15 +642,15 @@ Al final de la demo, los participantes deberían poder:
 
 | Tema | Guía | Duración |
 |------|------|----------|
-| Proyecto Vibe | [VIBE-GUIDE.md](VIBE-GUIDE.md) | 15 min |
-| Formato EARS | [EARS-GUIDE.md](EARS-GUIDE.md) | 5 min |
-| Proyecto Spec | [SPEC-GUIDE.md](SPEC-GUIDE.md) | ~90 min |
-| Steering Files | [STEERING-GUIDE.md](STEERING-GUIDE.md) | 5-10 min |
-| Agent Hooks | [HOOKS-GUIDE.md](HOOKS-GUIDE.md) | 5-10 min |
-| MCP Servers | [MCP-GUIDE.md](MCP-GUIDE.md) | 10-15 min |
-| GitHub/CI/CD | [GITHUB-CICD-GUIDE.md](GITHUB-CICD-GUIDE.md) | 10 min |
-| Mejores Prácticas | [BEST-PRACTICES.md](BEST-PRACTICES.md) | Referencia |
-| Avanzado | [ADVANCED-FEATURES.md](ADVANCED-FEATURES.md) | Referencia |
+| Proyecto Vibe | [VIBE-GUIDE.md](projects/VIBE-GUIDE.md) | 15 min |
+| Formato EARS | [EARS-GUIDE.md](projects/EARS-GUIDE.md) | 5 min |
+| Proyecto Spec | [SPEC-GUIDE.md](projects/SPEC-GUIDE.md) | ~90 min |
+| Steering Files | [STEERING-GUIDE.md](features/STEERING-GUIDE.md) | 5-10 min |
+| Agent Hooks | [HOOKS-GUIDE.md](features/HOOKS-GUIDE.md) | 5-10 min |
+| MCP Servers | [MCP-GUIDE.md](features/MCP-GUIDE.md) | 10-15 min |
+| GitHub/CI/CD | [GITHUB-CICD-GUIDE.md](features/GITHUB-CICD-GUIDE.md) | 10 min |
+| Mejores Prácticas | [BEST-PRACTICES.md](best-practices/BEST-PRACTICES.md) | Referencia |
+| Avanzado | [ADVANCED-FEATURES.md](best-practices/ADVANCED-FEATURES.md) | Referencia |
 
 ### Prompts Clave
 

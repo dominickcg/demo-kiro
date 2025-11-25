@@ -397,14 +397,14 @@ Usa steering files cuando:
 
 ## 📚 Recursos Relacionados
 
-- **[VIBE-GUIDE.md](VIBE-GUIDE.md)** - Guía del proyecto Vibe
-- **[SPEC-GUIDE.md](SPEC-GUIDE.md)** - Guía del proyecto Spec
-- **[EARS-GUIDE.md](EARS-GUIDE.md)** - Formato EARS de requirements
-- **[STEERING-GUIDE.md](STEERING-GUIDE.md)** - Configurar steering files
-- **[HOOKS-GUIDE.md](HOOKS-GUIDE.md)** - Configurar agent hooks
-- **[MCP-GUIDE.md](MCP-GUIDE.md)** - Configurar MCP servers
-- **[BEST-PRACTICES.md](BEST-PRACTICES.md)** - Mejores prácticas
-- **[ADVANCED-FEATURES.md](ADVANCED-FEATURES.md)** - Funcionalidades avanzadas
+- **[VIBE-GUIDE.md](projects/VIBE-GUIDE.md)** - Guía del proyecto Vibe
+- **[SPEC-GUIDE.md](projects/SPEC-GUIDE.md)** - Guía del proyecto Spec
+- **[EARS-GUIDE.md](projects/EARS-GUIDE.md)** - Formato EARS de requirements
+- **[STEERING-GUIDE.md](features/STEERING-GUIDE.md)** - Configurar steering files
+- **[HOOKS-GUIDE.md](features/HOOKS-GUIDE.md)** - Configurar agent hooks
+- **[MCP-GUIDE.md](features/MCP-GUIDE.md)** - Configurar MCP servers
+- **[BEST-PRACTICES.md](best-practices/BEST-PRACTICES.md)** - Mejores prácticas
+- **[ADVANCED-FEATURES.md](best-practices/ADVANCED-FEATURES.md)** - Funcionalidades avanzadas
 
 ---
 

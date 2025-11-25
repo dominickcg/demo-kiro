@@ -614,11 +614,11 @@ Crea tasks.md con pasos de migración incremental
 
 ## Recursos Adicionales
 
-- **BEST-PRACTICES.md:** Mejores prácticas básicas
-- **SPEC-GUIDE.md:** Guía completa de modo Spec
-- **STEERING-GUIDE.md:** Configurar convenciones
-- **HOOKS-GUIDE.md:** Automatizar workflows
-- **MCP-GUIDE.md:** Extender capacidades
+- **[BEST-PRACTICES.md](BEST-PRACTICES.md):** Mejores prácticas básicas
+- **[SPEC-GUIDE.md](../projects/SPEC-GUIDE.md):** Guía completa de modo Spec
+- **[STEERING-GUIDE.md](../features/STEERING-GUIDE.md):** Configurar convenciones
+- **[HOOKS-GUIDE.md](../features/HOOKS-GUIDE.md):** Automatizar workflows
+- **[MCP-GUIDE.md](../features/MCP-GUIDE.md):** Extender capacidades
 
 ---
 

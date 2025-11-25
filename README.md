@@ -23,38 +23,38 @@ Esta es una guía completa para aprender a usar Kiro, desde nivel básico hasta 
 
 ### Para Participantes
 
-1. **Lee el FAQ primero:** [FAQ.md](FAQ.md) - Responde preguntas básicas sobre Kiro
+1. **Lee el FAQ primero:** [FAQ.md](guides/FAQ.md) - Responde preguntas básicas sobre Kiro
 
 2. **Sigue las guías en orden:**
-   - **Parte 1 (15 min):** [VIBE-GUIDE.md](VIBE-GUIDE.md) - Desarrollo rápido
-   - **Ejercicio (5 min):** [EARS-GUIDE.md](EARS-GUIDE.md) - Formato de requirements
-   - **Parte 2 (~90 min):** [SPEC-GUIDE.md](SPEC-GUIDE.md) - Desarrollo estructurado
+   - **Parte 1 (15 min):** [VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md) - Desarrollo rápido
+   - **Ejercicio (5 min):** [EARS-GUIDE.md](guides/projects/EARS-GUIDE.md) - Formato de requirements
+   - **Parte 2 (~90 min):** [SPEC-GUIDE.md](guides/projects/SPEC-GUIDE.md) - Desarrollo estructurado
 
 3. **Explora características avanzadas:**
-   - [STEERING-GUIDE.md](STEERING-GUIDE.md) - Convenciones del proyecto
-   - [HOOKS-GUIDE.md](HOOKS-GUIDE.md) - Automatización de tareas
-   - [MCP-GUIDE.md](MCP-GUIDE.md) - Extender capacidades
-   - [GITHUB-CICD-GUIDE.md](GITHUB-CICD-GUIDE.md) - Integración continua
+   - [STEERING-GUIDE.md](guides/features/STEERING-GUIDE.md) - Convenciones del proyecto
+   - [HOOKS-GUIDE.md](guides/features/HOOKS-GUIDE.md) - Automatización de tareas
+   - [MCP-GUIDE.md](guides/features/MCP-GUIDE.md) - Extender capacidades
+   - [GITHUB-CICD-GUIDE.md](guides/features/GITHUB-CICD-GUIDE.md) - Integración continua
 
 4. **Profundiza tu conocimiento:**
-   - [BEST-PRACTICES.md](BEST-PRACTICES.md) - Optimiza tu uso de Kiro
-   - [ADVANCED-FEATURES.md](ADVANCED-FEATURES.md) - Técnicas avanzadas
+   - [BEST-PRACTICES.md](guides/best-practices/BEST-PRACTICES.md) - Optimiza tu uso de Kiro
+   - [ADVANCED-FEATURES.md](guides/best-practices/ADVANCED-FEATURES.md) - Técnicas avanzadas
 
 ### Para Instructores
 
 1. **Preparación (antes de la demo):**
-   - Revisa todas las guías con anticipación
+   - Revisa la [Guía Maestra](guides/DEMO-GUIDE.md) con el timeline completo
    - Verifica que tienes Node.js y Kiro instalados
    - Clona el repositorio y familiarízate con la estructura
 
 2. **Durante la demo:**
-   - **Minutos 0-15:** Sigue [VIBE-GUIDE.md](VIBE-GUIDE.md)
-   - **Minutos 15-20:** Ejercicio con [EARS-GUIDE.md](EARS-GUIDE.md)
-   - **Minutos 20-110:** Sigue [SPEC-GUIDE.md](SPEC-GUIDE.md) paso a paso
-   - **Minutos 110-120:** Q&A con [FAQ.md](FAQ.md) a mano
+   - **Minutos 0-15:** Sigue [VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md)
+   - **Minutos 15-20:** Ejercicio con [EARS-GUIDE.md](guides/projects/EARS-GUIDE.md)
+   - **Minutos 20-110:** Sigue [SPEC-GUIDE.md](guides/projects/SPEC-GUIDE.md) paso a paso
+   - **Minutos 110-120:** Q&A con [FAQ.md](guides/FAQ.md) a mano
 
 3. **Recursos de apoyo:**
-   - Usa `.kiro/specs/demo-task-manager/` como referencia
+   - Consulta la [Guía Maestra](guides/DEMO-GUIDE.md) para scripts y tips
    - Ten las guías de características listas para consulta rápida
    - Prepara ejemplos adicionales si hay tiempo extra
 
@@ -62,28 +62,30 @@ Esta es una guía completa para aprender a usar Kiro, desde nivel básico hasta 
 
 ```
 .
-├── README.md                          # Este archivo
-├── FAQ.md                             # Preguntas frecuentes sobre Kiro
+├── README.md                          # Este archivo (guía principal)
 ├── LICENSE                            # Licencia del proyecto
+├── .gitignore                         # Archivos ignorados por Git
 │
-├── VIBE-GUIDE.md                      # Guía del proyecto Vibe
-├── SPEC-GUIDE.md                      # Guía paso a paso del proyecto Spec
-├── EARS-GUIDE.md                      # Guía del ejercicio EARS
-├── STEERING-GUIDE.md                  # Guía de Steering Files
-├── HOOKS-GUIDE.md                     # Guía de Agent Hooks
-├── MCP-GUIDE.md                       # Guía de MCP Servers
-├── GITHUB-CICD-GUIDE.md               # Guía de GitHub y CI/CD
-├── BEST-PRACTICES.md                  # Mejores prácticas de Kiro
-├── ADVANCED-FEATURES.md               # Funcionalidades avanzadas de Kiro
+├── guides/                            # Todas las guías organizadas
+│   ├── DEMO-GUIDE.md                  # Guía maestra con timeline completo
+│   ├── FAQ.md                         # Preguntas frecuentes
+│   │
+│   ├── projects/                      # Guías de proyectos
+│   │   ├── VIBE-GUIDE.md              # Proyecto Vibe (15 min)
+│   │   ├── SPEC-GUIDE.md              # Proyecto Spec (~90 min)
+│   │   └── EARS-GUIDE.md              # Ejercicio EARS (5 min)
+│   │
+│   ├── features/                      # Guías de características
+│   │   ├── STEERING-GUIDE.md          # Steering Files
+│   │   ├── HOOKS-GUIDE.md             # Agent Hooks
+│   │   ├── MCP-GUIDE.md               # MCP Servers
+│   │   └── GITHUB-CICD-GUIDE.md       # GitHub y CI/CD
+│   │
+│   └── best-practices/                # Mejores prácticas
+│       ├── BEST-PRACTICES.md          # Mejores prácticas de Kiro
+│       └── ADVANCED-FEATURES.md       # Funcionalidades avanzadas
 │
-├── .kiro/
-│   └── specs/
-│       └── demo-task-manager/
-│           ├── requirements.md        # Requirements con formato EARS
-│           ├── design.md              # Diseño completo del proyecto
-│           └── tasks.md               # Plan de implementación
-│
-└── examples/
+└── examples/                          # Archivos de ejemplo
     ├── vibe/
     │   └── turnout-data.csv           # Datos para proyecto Vibe
     └── spec/
@@ -129,33 +131,33 @@ Al completar esta demo, aprenderás:
    - Lee [FAQ.md](FAQ.md) para familiarizarte con conceptos básicos
 
 4. **Sigue las guías en orden**
-   - **Parte 1:** [VIBE-GUIDE.md](VIBE-GUIDE.md) - Proyecto Vibe (15 min)
-   - **Ejercicio EARS:** [EARS-GUIDE.md](EARS-GUIDE.md) - Formato de requirements (5 min)
-   - **Parte 2:** [SPEC-GUIDE.md](SPEC-GUIDE.md) - Proyecto Spec (~90 min)
+   - **Parte 1:** [VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md) - Proyecto Vibe (15 min)
+   - **Ejercicio EARS:** [EARS-GUIDE.md](guides/projects/EARS-GUIDE.md) - Formato de requirements (5 min)
+   - **Parte 2:** [SPEC-GUIDE.md](guides/projects/SPEC-GUIDE.md) - Proyecto Spec (~90 min)
    - **Características avanzadas:** Steering, Hooks, MCP (según necesidad)
 
 ## 📚 Guías y Recursos
 
-### Guías de Proyectos
-- **[VIBE-GUIDE.md](VIBE-GUIDE.md)** - Guía completa del proyecto Vibe (15 min)
-- **[SPEC-GUIDE.md](SPEC-GUIDE.md)** - Guía paso a paso del proyecto Spec (~90 min)
-- **[EARS-GUIDE.md](EARS-GUIDE.md)** - Ejercicio práctico de formato EARS (5 min)
+### 🎯 Guía Maestra
+- **[DEMO-GUIDE.md](guides/DEMO-GUIDE.md)** - Timeline completo de 2 horas con scripts para instructores
 
-### Guías de Características
-- **[STEERING-GUIDE.md](STEERING-GUIDE.md)** - Configurar steering files (5-10 min)
-- **[HOOKS-GUIDE.md](HOOKS-GUIDE.md)** - Configurar agent hooks (5-10 min)
-- **[MCP-GUIDE.md](MCP-GUIDE.md)** - Configurar MCP servers (10-15 min)
-- **[GITHUB-CICD-GUIDE.md](GITHUB-CICD-GUIDE.md)** - GitHub y CI/CD (10 min)
+### 📖 Guías de Proyectos
+- **[VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md)** - Guía completa del proyecto Vibe (15 min)
+- **[SPEC-GUIDE.md](guides/projects/SPEC-GUIDE.md)** - Guía paso a paso del proyecto Spec (~90 min)
+- **[EARS-GUIDE.md](guides/projects/EARS-GUIDE.md)** - Ejercicio práctico de formato EARS (5 min)
 
-### Guías de Mejores Prácticas
-- **[BEST-PRACTICES.md](BEST-PRACTICES.md)** - Mejores prácticas de uso de Kiro
-- **[ADVANCED-FEATURES.md](ADVANCED-FEATURES.md)** - Funcionalidades avanzadas
-- **[FAQ.md](FAQ.md)** - Preguntas frecuentes
+### ⚙️ Guías de Características
+- **[STEERING-GUIDE.md](guides/features/STEERING-GUIDE.md)** - Configurar steering files (5-10 min)
+- **[HOOKS-GUIDE.md](guides/features/HOOKS-GUIDE.md)** - Configurar agent hooks (5-10 min)
+- **[MCP-GUIDE.md](guides/features/MCP-GUIDE.md)** - Configurar MCP servers (10-15 min)
+- **[GITHUB-CICD-GUIDE.md](guides/features/GITHUB-CICD-GUIDE.md)** - GitHub y CI/CD (10 min)
 
-### Specs del Proyecto
-- **Requirements:** `.kiro/specs/demo-task-manager/requirements.md`
-- **Design:** `.kiro/specs/demo-task-manager/design.md`
-- **Tasks:** `.kiro/specs/demo-task-manager/tasks.md`
+### 💡 Guías de Mejores Prácticas
+- **[BEST-PRACTICES.md](guides/best-practices/BEST-PRACTICES.md)** - Mejores prácticas de uso de Kiro
+- **[ADVANCED-FEATURES.md](guides/best-practices/ADVANCED-FEATURES.md)** - Funcionalidades avanzadas
+
+### ❓ Preguntas Frecuentes
+- **[FAQ.md](guides/FAQ.md)** - Respuestas a preguntas comunes sobre Kiro
 
 ## 🤝 Contribuciones
 

@@ -410,4 +410,4 @@ Ahora que entiendes agent hooks, puedes:
 2. Combinar hooks con steering files para workflows completos
 3. Explorar MCP Servers para extender capacidades de Kiro
 
-**Archivo relacionado:** `MCP-GUIDE.md` - Aprende sobre MCP Servers
+**Archivo relacionado:** [MCP-GUIDE.md](MCP-GUIDE.md) - Aprende sobre MCP Servers
