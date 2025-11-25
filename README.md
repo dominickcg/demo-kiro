@@ -21,8 +21,6 @@ Esta es una guía completa para aprender a usar Kiro, desde nivel básico hasta 
 
 ## 🚀 Cómo Usar Esta Guía
 
-### Para Participantes
-
 1. **Lee el FAQ primero:** [FAQ.md](guides/FAQ.md) - Responde preguntas básicas sobre Kiro
 
 2. **Sigue las guías en orden:**
@@ -39,24 +37,6 @@ Esta es una guía completa para aprender a usar Kiro, desde nivel básico hasta 
 4. **Profundiza tu conocimiento:**
    - [BEST-PRACTICES.md](guides/best-practices/BEST-PRACTICES.md) - Optimiza tu uso de Kiro
    - [ADVANCED-FEATURES.md](guides/best-practices/ADVANCED-FEATURES.md) - Técnicas avanzadas
-
-### Para Instructores
-
-1. **Preparación (antes de la demo):**
-   - Revisa la [Guía Maestra](guides/DEMO-GUIDE.md) con el timeline completo
-   - Verifica que tienes Node.js y Kiro instalados
-   - Clona el repositorio y familiarízate con la estructura
-
-2. **Durante la demo:**
-   - **Minutos 0-15:** Sigue [VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md)
-   - **Minutos 15-20:** Ejercicio con [EARS-GUIDE.md](guides/projects/EARS-GUIDE.md)
-   - **Minutos 20-110:** Sigue [SPEC-GUIDE.md](guides/projects/SPEC-GUIDE.md) paso a paso
-   - **Minutos 110-120:** Q&A con [FAQ.md](guides/FAQ.md) a mano
-
-3. **Recursos de apoyo:**
-   - Consulta la [Guía Maestra](guides/DEMO-GUIDE.md) para scripts y tips
-   - Ten las guías de características listas para consulta rápida
-   - Prepara ejemplos adicionales si hay tiempo extra
 
 ## 📁 Estructura del Repositorio
 
@@ -109,26 +89,27 @@ Al completar esta demo, aprenderás:
 
 ## 🛠️ Requisitos Previos
 
-- Node.js instalado (v18 o superior)
-- Kiro IDE instalado
-- Conocimientos básicos de TypeScript
-- Terminal/línea de comandos
+- **Kiro IDE instalado** - [Descargar Kiro](https://kiro.ai)
+- **Conocimientos básicos de TypeScript** (opcional pero recomendado)
+- **Git instalado** (para clonar el repositorio)
+
+**Nota:** Node.js y TypeScript se configurarán con ayuda de Kiro durante la demo. Las guías incluyen instrucciones sobre cómo pedirle a Kiro que configure el entorno.
 
 ## ⚡ Inicio Rápido
 
 1. **Clona este repositorio**
    ```bash
-   git clone <url-del-repo>
-   cd <nombre-del-repo>
+   git clone https://github.com/dominickcg/demo-kiro.git
+   cd demo-kiro
    ```
 
 2. **Abre en Kiro**
-   ```bash
-   kiro .
-   ```
+   - Abre Kiro IDE
+   - File → Open Folder
+   - Selecciona la carpeta `demo-kiro`
 
 3. **Comienza con el FAQ**
-   - Lee [FAQ.md](FAQ.md) para familiarizarte con conceptos básicos
+   - Lee [FAQ.md](guides/FAQ.md) para familiarizarte con conceptos básicos
 
 4. **Sigue las guías en orden**
    - **Parte 1:** [VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md) - Proyecto Vibe (15 min)
@@ -139,7 +120,7 @@ Al completar esta demo, aprenderás:
 ## 📚 Guías y Recursos
 
 ### 🎯 Guía Maestra
-- **[DEMO-GUIDE.md](guides/DEMO-GUIDE.md)** - Timeline completo de 2 horas con scripts para instructores
+- **[DEMO-GUIDE.md](guides/DEMO-GUIDE.md)** - Timeline completo de 2 horas paso a paso
 
 ### 📖 Guías de Proyectos
 - **[VIBE-GUIDE.md](guides/projects/VIBE-GUIDE.md)** - Guía completa del proyecto Vibe (15 min)
@@ -167,32 +148,32 @@ Esta es una guía de demostración. Si encuentras errores o tienes sugerencias d
 
 [Especificar licencia aquí]
 
-## 💡 Consejos para la Demo
+## 💡 Consejos para Aprovechar la Demo
 
-### Para Modo Vibe (15 min)
-- Mantén el ritmo rápido
-- No te detengas en detalles
-- Muestra la velocidad de iteración
+### Modo Vibe (15 min)
+- Enfócate en la velocidad de desarrollo
+- Observa cómo iterar rápidamente
+- Nota la diferencia con desarrollo tradicional
 
-### Para Modo Spec (resto)
-- Tómate tiempo para explicar cada concepto
+### Modo Spec (resto)
+- Tómate tiempo para entender cada concepto
 - Ejecuta las tareas una por una
-- Muestra los tests ejecutándose
-- Demuestra las características avanzadas
+- Observa cómo los tests validan el código
+- Experimenta con las características avanzadas
 
 ### Mejores Prácticas
-- Usa #File para dar contexto específico
+- Usa #File para dar contexto específico a Kiro
 - Divide tareas complejas en pasos pequeños
-- Monitorea el consumo de tokens
-- Revisa el FAQ cuando tengas dudas
+- Monitorea el consumo de tokens en el chat
+- Consulta el FAQ cuando tengas dudas
 
 ## 🎓 Después de la Demo
 
-1. Experimenta con tus propios proyectos
-2. Prueba crear specs para funcionalidades reales
-3. Explora más características de Kiro
-4. Comparte tu experiencia con el equipo
+1. **Experimenta:** Aplica lo aprendido en tus propios proyectos
+2. **Practica:** Crea specs para funcionalidades reales
+3. **Explora:** Descubre más características avanzadas de Kiro
+4. **Comparte:** Enseña a tu equipo lo que aprendiste
 
 ---
 
-**¿Preguntas?** Consulta el [FAQ.md](FAQ.md) o abre un issue en este repositorio.
+**¿Preguntas?** Consulta el [FAQ.md](guides/FAQ.md) o abre un issue en este repositorio.
