@@ -101,24 +101,62 @@ Crea la estructura de carpetas para el proyecto:
 
 **¿Qué es un Steering File?**
 
-Un steering file le dice a Kiro qué convenciones seguir automáticamente. Lo configuramos ahora para que todo el código generado sea consistente.
+Un steering file es un archivo de configuración que proporciona contexto y convenciones a Kiro. Funciona como "instrucciones permanentes" que Kiro consulta automáticamente cuando genera código.
+
+**¿Por qué configurarlo ahora?**
+- Ahorra tiempo: No repites las mismas instrucciones en cada prompt
+- Mantiene consistencia: Todo el código sigue las mismas convenciones
+- Ahorra tokens: Las convenciones no se incluyen en cada mensaje
+
+**Ubicación:** `.kiro/steering/typescript-conventions.md`
 
 **Prompt para Kiro:**
 ```
-Crea .kiro/steering/typescript-conventions.md con convenciones para este proyecto:
-- Usar interfaces en lugar de types
-- Nombres en camelCase para funciones y variables
-- Comentarios en español para lógica de negocio
-- Mensajes de usuario siempre en español
-- Un componente por archivo
-- Tests en archivos .test.ts
+Crea .kiro/steering/typescript-conventions.md con el siguiente contenido:
+
+# Convenciones de TypeScript para Validador de Actas
+
+## Estilo de Código
+
+### Naming Conventions
+- Interfaces: PascalCase (ej: Acta, ValidationResult)
+- Funciones y variables: camelCase (ej: parseActa, isValid)
+- Constantes: UPPER_SNAKE_CASE (ej: MAX_FILE_SIZE)
+
+### Type System
+- Usar interface en lugar de type cuando sea posible
+- Definir tipos de retorno explícitos en funciones públicas
+
+### Async/Await
+- Usar async/await en lugar de .then() para promesas
+- Siempre manejar errores con try/catch en funciones async
+
+## Estructura de Archivos
+- Un componente/clase por archivo
+- Archivos de tipos en carpeta types/
+- Tests en archivos .test.ts junto al código
+
+## Comentarios
+- Comentarios inline en español para explicar lógica de negocio
+- JSDoc en inglés para documentación de API pública
+
+## Mensajes de Usuario
+- Todos los mensajes mostrados al usuario deben estar en español
+- Incluir valores específicos en los mensajes de error
 ```
 
-**Verificación:** Abre el archivo y revisa que las convenciones están documentadas.
+**Verificación:** 
+1. Abre `.kiro/steering/typescript-conventions.md`
+2. Revisa que el contenido está completo
 
-**Beneficio:** A partir de ahora, Kiro seguirá estas convenciones automáticamente sin que tengas que repetirlas en cada prompt.
+**Probar que funciona:**
+```
+Kiro, crea una función auxiliar que calcule el porcentaje de participación
+```
 
-**Más información:** Consulta [STEERING-GUIDE.md](../features/STEERING-GUIDE.md) para detalles completos.
+Observa que Kiro usa camelCase, comentarios en español, y sigue las convenciones sin que las menciones.
+
+**Beneficio:** A partir de ahora, todo el código generado será consistente automáticamente.
 
 ---
 
@@ -407,30 +445,63 @@ npm test
 
 **¿Qué es un Agent Hook?**
 
-Un agent hook automatiza tareas en respuesta a eventos. Vamos a configurar uno para que los tests se ejecuten automáticamente cada vez que guardes un archivo.
+Los agent hooks son automatizaciones que ejecutan acciones en respuesta a eventos. Son como "triggers" que responden a cambios en tu proyecto.
 
-**Acción:**
+**¿Por qué configurarlo ahora?**
+- Ya tienes tests implementados (algo que ejecutar)
+- Detectarás errores inmediatamente al guardar
+- No necesitas ejecutar tests manualmente cada vez
 
-1. Abre el panel de Agent Hooks en Kiro (busca en la barra lateral)
-2. Haz clic en "Create New Hook" o botón "+"
-3. Configura el hook:
-   - **Name:** "Ejecutar tests al guardar"
-   - **Trigger:** onFileSave
-   - **File Pattern:** `**/*.ts`
-   - **Action Type:** Command
+**Tipos de eventos disponibles:**
+- **onFileSave:** Se dispara cuando guardas un archivo
+- **onMessage:** Se dispara cuando envías un mensaje a Kiro
+- **onSessionStart:** Se dispara cuando inicias una sesión
+- **Manual:** Se dispara cuando haces clic en un botón
+
+**Configuración paso a paso:**
+
+1. **Abrir panel de Agent Hooks:**
+   - Busca "Agent Hooks" en la barra lateral de Kiro
+   - O usa Command Palette: `Ctrl+Shift+P` → "Open Kiro Hook UI"
+
+2. **Crear nuevo hook:**
+   - Haz clic en "Create New Hook" o botón "+"
+
+3. **Configurar el hook:**
+   - **Name:** `Ejecutar tests al guardar`
+   - **Trigger:** `onFileSave`
+   - **File Pattern:** `**/*.ts` (todos los archivos TypeScript)
+   - **Action Type:** `Command`
    - **Command:** `npm test`
-   - **Enabled:** ✓
+   - **Enabled:** ✓ (marcado)
 
-4. Guarda el hook
+4. **Guardar:** Haz clic en "Save" o "Create"
 
-**Probar:**
-- Modifica cualquier archivo .ts
-- Guarda el archivo (Ctrl+S)
-- Observa que los tests se ejecutan automáticamente en la terminal
+**Probar que funciona:**
 
-**Beneficio:** Ahora detectarás errores inmediatamente sin tener que ejecutar tests manualmente.
+1. Abre cualquier archivo `.ts` (por ejemplo `src/validator/actaValidator.ts`)
+2. Haz un cambio pequeño (agrega un comentario)
+3. Guarda el archivo (`Ctrl+S`)
+4. Observa la terminal: los tests se ejecutan automáticamente
 
-**Más información:** Consulta [HOOKS-GUIDE.md](../features/HOOKS-GUIDE.md) para más ejemplos de hooks.
+**Resultado esperado:**
+```
+> npm test
+
+Running tests...
+✓ All tests passed
+```
+
+**Patrones de File Pattern útiles:**
+
+| Pattern | Descripción |
+|---------|-------------|
+| `**/*.ts` | Todos los archivos TypeScript |
+| `src/**/*.ts` | Solo TypeScript en src/ |
+| `**/*.test.ts` | Solo archivos de test |
+| `**/*.{ts,js}` | TypeScript o JavaScript |
+
+**Beneficio:** Ahora detectarás errores inmediatamente sin ejecutar tests manualmente. Es como tener un asistente que verifica tu código constantemente.
 
 ---
 
@@ -478,26 +549,125 @@ npm test
 
 **¿Qué es MCP?**
 
-MCP (Model Context Protocol) extiende las capacidades de Kiro con herramientas externas. Vamos a configurar el servidor filesystem como ejemplo.
+MCP (Model Context Protocol) es un protocolo que permite a Kiro conectarse con herramientas y servicios externos. Piensa en MCP como "plugins" que le dan a Kiro nuevas capacidades.
+
+**¿Para qué sirve?**
+- Acceso a sistemas externos (bases de datos, APIs)
+- Herramientas especializadas (análisis de código, búsqueda avanzada)
+- Integración con servicios (GitHub, Slack, etc.)
+
+**Nota:** Esta sección es opcional. MCP es útil para integraciones avanzadas pero no es necesario para el proyecto básico.
+
+### Paso 10.1: Instalar uvx (si no lo tienes)
+
+MCP servers se ejecutan con `uvx`, que requiere `uv` (gestor de paquetes Python).
+
+**Verificar si está instalado:**
+```bash
+uv --version
+```
+
+**Si no está instalado:**
+
+Windows:
+```bash
+pip install uv
+```
+
+macOS/Linux:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### Paso 10.2: Configurar MCP Server Filesystem
+
+**Crear archivo:** `.kiro/settings/mcp.json`
 
 **Prompt para Kiro:**
 ```
-Configura un MCP server filesystem en .kiro/settings/mcp.json que permita:
-- Leer archivos del sistema
-- Listar directorios
-- Auto-aprobar operaciones de lectura
+Crea .kiro/settings/mcp.json con esta configuración:
+
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "uvx",
+      "args": ["mcp-server-filesystem"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": ["read_file", "list_directory"]
+    }
+  }
+}
 ```
 
-**Verificación:** Revisa que el servidor se conecta en el panel de MCP.
+**¿Qué hace cada parte?**
+- `command`: Ejecutable que inicia el servidor
+- `args`: Argumentos para el comando
+- `env`: Variables de entorno
+- `disabled`: Si está activo o no
+- `autoApprove`: Herramientas que no piden confirmación
 
-**Uso:**
+### Paso 10.3: Verificar Conexión
+
+**Método 1: Panel de MCP Servers**
+1. Abre el panel de MCP Servers en Kiro
+2. Busca "filesystem" en la lista
+3. Verifica el estado: ✓ Conectado
+
+**Método 2: Command Palette**
+1. `Ctrl+Shift+P` → "View MCP Servers"
+2. Revisa el estado de cada servidor
+
+**Si no se conecta:**
+- Verifica que `uvx` está instalado
+- Revisa la sintaxis del JSON
+- Reconecta desde el panel de MCP
+
+### Paso 10.4: Usar Herramientas MCP
+
+**Ejemplo 1: Listar archivos**
 ```
 Usando herramientas MCP, lista los archivos en examples/spec/
 ```
 
-**Más información:** Consulta [MCP-GUIDE.md](../features/MCP-GUIDE.md) para configurar otros servidores.
+**Resultado esperado:**
+```
+- valid-acta.json
+- invalid-acta.json
+- anomaly-acta.json
+```
 
-**Nota:** Esta sección es opcional. MCP es útil para integraciones avanzadas pero no es necesario para el proyecto básico.
+**Ejemplo 2: Leer archivo**
+```
+Usando MCP, lee el contenido de examples/spec/valid-acta.json
+```
+
+**Herramientas disponibles del servidor filesystem:**
+- `read_file` - Leer contenido de archivos
+- `write_file` - Escribir en archivos
+- `list_directory` - Listar contenido de carpetas
+- `create_directory` - Crear carpetas
+- `move_file` - Mover/renombrar archivos
+
+### Paso 10.5: AutoApprove (Importante)
+
+**¿Qué es autoApprove?**
+
+Por defecto, Kiro pide confirmación antes de usar herramientas MCP. Con `autoApprove`, especificas herramientas que se ejecuten sin confirmación.
+
+**Usar autoApprove para:**
+- Operaciones de solo lectura (`read_file`, `list_directory`)
+- Herramientas que usas frecuentemente
+- Operaciones seguras sin efectos secundarios
+
+**NO usar autoApprove para:**
+- Operaciones de escritura (`write_file`, `delete_file`)
+- Operaciones destructivas
+- Herramientas que modifican datos externos
+
+**Beneficio de MCP:** Kiro puede explorar el sistema de archivos de forma más flexible y acceder a herramientas especializadas según tus necesidades.
 
 ---
 
